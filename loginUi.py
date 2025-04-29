@@ -1,13 +1,13 @@
 from PyQt5 import QtCore
 from PyQt5 import QtWidgets, uic
 import sys, IMAGES.res
-
-
 from Login import Login
 from DASHBOARD.CaptainDB import CaptainDashboardWindow
-
+from DATABASE.database import Database
 class LoginWindow(QtWidgets.QMainWindow):
+
     def __init__(self):
+
         super().__init__()
         uic.loadUi("LoginUi.ui", self)
 
@@ -29,6 +29,8 @@ class LoginWindow(QtWidgets.QMainWindow):
        # pyrcc5 res.qrc -o res.py
 
     def open_main_window(self):
+
+
         username = self.usernameline.text()
         password = self.passwordline.text()
         login = Login(username, password)
