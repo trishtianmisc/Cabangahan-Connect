@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="Adduserlogo">
+    <file>adduserlogo.png</file>
+  </qresource>
+  <qresource prefix="newPrefix"/>
+</RCC>

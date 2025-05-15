@@ -1,0 +1,85 @@
+CREATE TABLE OFFICER (
+
+    OFF_ID                 SERIAL              PRIMARY KEY,
+    OFF_FIRSTNAME          VARCHAR(50)         NOT NULL,
+    OFF_LASTNAME           VARCHAR(50)         NOT NULL,
+    OFF_MIDDLENAME         VARCHAR(50)         NOT NULL,
+    OFF_USERNAME           VARCHAR(50)         NOT NULL,
+    OFF_PASSWORD           VARCHAR(15)         NOT NULL,
+    POSITION_ID            INTEGER             NOT NULL,
+    RES_ID                 INTEGER             NOT NULL,
+    
+    FOREIGN KEY(RES_ID) REFERENCES RESIDENT(RES_ID) ON DELETE CASCADE ON UPDATE CASCADE
+
+);
+
+INSERT INTO OFFICER (OFF_ID, OFF_FIRSTNAME, OFF_LASTNAME_, OFF_MIDDLENAME, OFF_USERNAME, OFF_PASSWORD)
+VALUES ('001', 'Juan', 'Dela Cruz', 'Santos', 'juandelacruz', 'securePassword123');
+
+CREATE TABLE RESIDENT (
+
+RES_ID                  SERIAL                  PRIMARY KEY,          
+RES_FIRSTNAME           VARCHAR(50)             NOT NULL,
+RES_LASTNAME            VARCHAR(50)             NOT NULL,
+RES_MIDDLENAME          VARCHAR(50)             NOT NULL,
+RES_DATEOFBIRTH         DATE                    NOT NULL,
+RES_PLACEOFBIRTH        VARCHAR(50)             NOT NULL,
+RES_NATIONALITY         VARCHAR(50)             NOT NULL,
+RES_RELIGION            VARCHAR(50)             NOT NULL,
+RES_PUROK               VARCHAR(50)             NOT NULL,
+RES_GENDER              VARCHAR(7)              NOT NULL,
+RES_PWD                 VARCHAR(5)              NOT NULL,
+RES_DECEASED            VARCHAR(5)              NOT NULL,
+RES_BLOODTYPE           VARCHAR(4)              NOT NULL,
+RES_HEIGHT              VARCHAR(10)             NOT NULL,
+RES_FATHER              VARCHAR(50)             NOT NULL,
+RES_MOTHER              VARCHAR(50)             NOT NULL
+
+
+)
+
+
+
+CREATE TABLE [dbo].[PROGRAM_COURSE] (
+    [PRCS_ID]         INT          IDENTITY (1, 1) NOT NULL,
+    [PRCS_EFFECTYEAR] INT          NOT NULL,
+    [PRCS_YEARLEVEL]  INT          NOT NULL,
+    [PRCS_SEMESTER]   NVARCHAR (5) NOT NULL,
+    [PROG_ID]         INT          NOT NULL,
+    [CRS_ID]          INT          NOT NULL,
+    PRIMARY KEY CLUSTERED ([PRCS_ID] ASC),
+    UNIQUE NONCLUSTERED ([PROG_ID] ASC, [CRS_ID] ASC),
+    FOREIGN KEY ([PROG_ID]) REFERENCES [dbo].[PROGRAM] ([PROG_ID]) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE [dbo].[COURSE] (
+    [CRS_ID]         INT           IDENTITY (1, 1) NOT NULL,
+    [CRS_NAME]       NVARCHAR (50) NOT NULL,
+    [CRS_CODE]       NVARCHAR (50) NOT NULL,
+    [CRS_YEARLEVEL]  NVARCHAR (50) NOT NULL,
+    [CRS_LABHOURS]   INT           NOT NULL,
+    [CRS_LECHOURS]   INT           NOT NULL,
+    [CRS_UNITS]      INT           NOT NULL,
+    [CRS_TOTALHOURS] INT           NOT NULL,
+    [CRS_REMARKS]    NTEXT         NOT NULL,
+    [PREQ_ID]        INT           NULL,
+    PRIMARY KEY CLUSTERED ([CRS_ID] ASC),
+    FOREIGN KEY ([PREQ_ID]) REFERENCES [dbo].[COURSE] ([CRS_ID])
+);
+
+CREATE TABLE [dbo].[Department] (
+    [DEP_ID]   INT            IDENTITY (1, 1) NOT NULL,
+    [DEP_NAME] NVARCHAR (100) NULL,
+    PRIMARY KEY CLUSTERED ([DEP_ID] ASC)
+);
+
+CREATE TABLE [dbo].[PROGRAM] (
+    [PROG_ID]         INT           IDENTITY (1, 1) NOT NULL,
+    [PROG_NAME]       NVARCHAR (50) NOT NULL,
+    [PROG_CODE]       NVARCHAR (50) NOT NULL,
+    [PROG_DEGREETYPE] NVARCHAR (50) NOT NULL,
+    [PROG_DURATION]   INT           NOT NULL,
+    [PROG_REMARKS]    NTEXT         NOT NULL,
+    [DEP_ID]          INT           NOT NULL,
+    PRIMARY KEY CLUSTERED ([PROG_ID] ASC)
+);
