@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>stackedWidget</class>
+ <widget class="QWidget" name="stackedWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>762</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QPushButton" name="addpurokbutton">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>170</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ADD PUROK</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="residentrequest" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1611</width>
+     <height>125</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>10000</width>
+     <height>200</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> background-color: #2c3e50;</string>
+   </property>
+   <widget class="QLabel" name="residentlabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>426</width>
+      <height>83</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri</family>
+      <pointsize>3</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">  background-color: #2c3e50;
+color: white;
+Margin-left: 20px; 
+width: 200px;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:26pt;&quot;&gt;ADD PUROK&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="margin">
+     <number>15</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QTableWidget" name="puroktable">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>250</y>
+     <width>711</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QTableWidget {
+    background-color: #ffffff;
+    gridline-color: #e0e0e0;
+    border: 1px solid #d0d0d0;
+    font: 12px &quot;Segoe UI&quot;, sans-serif;
+    selection-background-color: #337ab7;
+    selection-color: #ffffff;
+}
+
+
+QHeaderView::section {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 8px;
+    border: 0px solid #34495e;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+QTableWidget::item {
+    background-color: #ffffff;
+}
+
+QTableWidget::item:alternate {
+    background-color: #f7f7f7;
+}
+
+
+QTableWidget::item:hover {
+    background-color: #e1f5fe;
+}
+
+QTableWidget::item:selected {
+    background-color: #337ab7;
+    color: #ffffff;
+}
+
+QTableWidget::focus {
+    outline: none;
+}
+
+QTableCornerButton::section {
+    background-color: #2c3e50;
+    border: 0px;
+}</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>PUROK ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>PUROK NAME</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string/>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
