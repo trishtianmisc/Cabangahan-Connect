@@ -1,0 +1,1431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProfilingWidget</class>
+ <widget class="QWidget" name="ProfilingWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1403</width>
+    <height>860</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">border: none;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>80</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #0B2E33;
+
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="leftMargin">
+       <number>37</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>21</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;</string>
+        </property>
+        <property name="text">
+         <string>RESIDENT</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frame_2">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame {
+
+background-color: white;
+
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QFrame" name="frame_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>1379</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>61</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>80</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #1ABC9C	;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border:none; color: white;</string>
+         </property>
+         <property name="text">
+          <string>PERSONAL INFORMATION</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pic_button">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>340</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: gray;
+color: white;
+border: 1px solid black;
+</string>
+      </property>
+      <property name="text">
+       <string>Attach file</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_3">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>100</y>
+        <width>321</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid black;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="pic_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>291</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid white;</string>
+       </property>
+       <property name="text">
+        <string>No Picture</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLineEdit" name="line_lastname">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>240</y>
+        <width>391</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Base QLineEdit styling */
+QLineEdit {
+    background-color: #fff;            /* white background */
+    border: 1px solid #0B2E33;            /* light gray border *             /* rounded corners */
+    padding: 6px 8px;                  /* vertical/horizontal padding */
+    font-size: 14px;                   /* sensible text size */
+    color: #333;                       /* dark text */
+}
+
+/* Hover state: slightly darker border */
+QLineEdit:hover {
+    border: 1px solid #82D37B;         /* green accent on hover */
+}
+
+/* Focus state: green glow and stronger border */
+QLineEdit:focus {
+    border: 1px solid #82D37B;         /* green accent */
+    outline: none;                     /* remove default focus ring */
+    /* outer glow approximation */
+    qproperty-frame: false;
+}
+
+/* Disabled state: muted look */
+QLineEdit:disabled {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    color: #999;
+}
+
+/* Placeholder text styling */
+QLineEdit::placeholder {
+    color: #999;
+    font-style: italic;
+}
+</string>
+      </property>
+      <property name="placeholderText">
+       <string>Enter Last Name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>90</y>
+        <width>158</width>
+        <height>49</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>First Name:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_firstname">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>140</y>
+        <width>391</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Base QLineEdit styling */
+QLineEdit {
+    background-color: #fff;            /* white background */
+    border: 1px solid #0B2E33;            /* light gray border *             /* rounded corners */
+    padding: 6px 8px;                  /* vertical/horizontal padding */
+    font-size: 14px;                   /* sensible text size */
+    color: #333;                       /* dark text */
+}
+
+/* Hover state: slightly darker border */
+QLineEdit:hover {
+    border: 1px solid #82D37B;         /* green accent on hover */
+}
+
+/* Focus state: green glow and stronger border */
+QLineEdit:focus {
+    border: 1px solid #82D37B;         /* green accent */
+    outline: none;                     /* remove default focus ring */
+    /* outer glow approximation */
+    qproperty-frame: false;
+}
+
+/* Disabled state: muted look */
+QLineEdit:disabled {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    color: #999;
+}
+
+/* Placeholder text styling */
+QLineEdit::placeholder {
+    color: #999;
+    font-style: italic;
+}
+</string>
+      </property>
+      <property name="placeholderText">
+       <string>Enter First Name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>200</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Last Name:</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="date_dob">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>240</y>
+        <width>391</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>300</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    background-color: #fff;            /* white background */
+    border: 1px solid #0B2E33;            /* light gray border */                /* rounded corners */
+    padding: 6px 8px;                  /* vertical/horizontal padding */
+    font-size: 14px;                   /* sensible text size */
+    color: #333;                       /* dark text */
+
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>100</y>
+        <width>102</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Middle Name:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>200</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Date of Birth:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_middlename">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>140</y>
+        <width>391</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Base QLineEdit styling */
+QLineEdit {
+    background-color: #fff;            /* white background */
+    border: 1px solid #0B2E33;            /* light gray border *             /* rounded corners */
+    padding: 6px 8px;                  /* vertical/horizontal padding */
+    font-size: 14px;                   /* sensible text size */
+    color: #333;                       /* dark text */
+}
+
+/* Hover state: slightly darker border */
+QLineEdit:hover {
+    border: 1px solid #82D37B;         /* green accent on hover */
+}
+
+/* Focus state: green glow and stronger border */
+QLineEdit:focus {
+    border: 1px solid #82D37B;         /* green accent */
+    outline: none;                     /* remove default focus ring */
+    /* outer glow approximation */
+    qproperty-frame: false;
+}
+
+/* Disabled state: muted look */
+QLineEdit:disabled {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    color: #999;
+}
+
+/* Placeholder text styling */
+QLineEdit::placeholder {
+    color: #999;
+    font-style: italic;
+}
+</string>
+      </property>
+      <property name="placeholderText">
+       <string>Enter Middle Name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>310</y>
+        <width>158</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Place of Birth:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_pob">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>350</y>
+        <width>191</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Base QLineEdit styling */
+QLineEdit {
+    background-color: #fff;            /* white background */
+    border: 1px solid #0B2E33;            /* light gray border *             /* rounded corners */
+    padding: 6px 8px;                  /* vertical/horizontal padding */
+    font-size: 14px;                   /* sensible text size */
+    color: #333;                       /* dark text */
+}
+
+/* Hover state: slightly darker border */
+QLineEdit:hover {
+    border: 1px solid #82D37B;         /* green accent on hover */
+}
+
+/* Focus state: green glow and stronger border */
+QLineEdit:focus {
+    border: 1px solid #82D37B;         /* green accent */
+    outline: none;                     /* remove default focus ring */
+    /* outer glow approximation */
+    qproperty-frame: false;
+}
+
+/* Disabled state: muted look */
+QLineEdit:disabled {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    color: #999;
+}
+
+/* Placeholder text styling */
+QLineEdit::placeholder {
+    color: #999;
+    font-style: italic;
+}
+</string>
+      </property>
+      <property name="placeholderText">
+       <string>Enter Place of Birth</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_nationality">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>350</y>
+        <width>191</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Base QLineEdit styling */
+QLineEdit {
+    background-color: #fff;            /* white background */
+    border: 1px solid #0B2E33;            /* light gray border *             /* rounded corners */
+    padding: 6px 8px;                  /* vertical/horizontal padding */
+    font-size: 14px;                   /* sensible text size */
+    color: #333;                       /* dark text */
+}
+
+/* Hover state: slightly darker border */
+QLineEdit:hover {
+    border: 1px solid #82D37B;         /* green accent on hover */
+}
+
+/* Focus state: green glow and stronger border */
+QLineEdit:focus {
+    border: 1px solid #82D37B;         /* green accent */
+    outline: none;                     /* remove default focus ring */
+    /* outer glow approximation */
+    qproperty-frame: false;
+}
+
+/* Disabled state: muted look */
+QLineEdit:disabled {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    color: #999;
+}
+
+/* Placeholder text styling */
+QLineEdit::placeholder {
+    color: #999;
+    font-style: italic;
+}
+</string>
+      </property>
+      <property name="placeholderText">
+       <string>Enter Nationality</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_26">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>310</y>
+        <width>158</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Nationality:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>310</y>
+        <width>135</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Religion:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_30">
+      <property name="geometry">
+       <rect>
+        <x>1080</x>
+        <y>310</y>
+        <width>134</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Purok:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="combo_purok">
+      <property name="geometry">
+       <rect>
+        <x>1080</x>
+        <y>350</y>
+        <width>191</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Base QLineEdit styling */
+
+    background-color: #fff;            /* white background */
+    border: 1px solid #0B2E33;            /* light gray border *                /* rounded corners */
+    padding: 6px 8px;                  /* vertical/horizontal padding */
+    font-size: 14px;                   /* sensible text size */
+    color: #333;                       /* dark text */
+</string>
+      </property>
+      <property name="Items" stdset="0">
+       <string/>
+      </property>
+      <item>
+       <property name="text">
+        <string>Purok Nangka</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Purok Lubi</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Purok Kaymito</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="line_religion">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>350</y>
+        <width>191</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Base QLineEdit styling */
+QLineEdit {
+    background-color: #fff;            /* white background */
+    border: 1px solid #0B2E33;            /* light gray border *             /* rounded corners */
+    padding: 6px 8px;                  /* vertical/horizontal padding */
+    font-size: 14px;                   /* sensible text size */
+    color: #333;                       /* dark text */
+}
+
+/* Hover state: slightly darker border */
+QLineEdit:hover {
+    border: 1px solid #82D37B;         /* green accent on hover */
+}
+
+/* Focus state: green glow and stronger border */
+QLineEdit:focus {
+    border: 1px solid #82D37B;         /* green accent */
+    outline: none;                     /* remove default focus ring */
+    /* outer glow approximation */
+    qproperty-frame: false;
+}
+
+/* Disabled state: muted look */
+QLineEdit:disabled {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    color: #999;
+}
+
+/* Placeholder text styling */
+QLineEdit::placeholder {
+    color: #999;
+    font-style: italic;
+}
+</string>
+      </property>
+      <property name="placeholderText">
+       <string>Enter Religion</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_7">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>430</y>
+        <width>1379</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>61</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>80</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #1ABC9C	;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border:none; color: white;</string>
+         </property>
+         <property name="text">
+          <string>ADDITIONAL</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="frame_22">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>520</y>
+        <width>121</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_24">
+       <item>
+        <widget class="QLabel" name="label_23">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Registered?</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="check_registered">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="frame_20">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>519</y>
+        <width>141</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_22">
+       <item>
+        <widget class="QLabel" name="label_21">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Gender:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_2">
+         <property name="text">
+          <string>Male</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton">
+         <property name="text">
+          <string>Female</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="frame_19">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>520</y>
+        <width>121</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_12">
+       <item>
+        <widget class="QLabel" name="label_32">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>PWD?</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="check_pwd">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLineEdit" name="line_weight">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>690</y>
+        <width>118</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Base QLineEdit styling */
+QLineEdit {
+    background-color: #fff;            /* white background */
+    border: 1px solid #0B2E33;            /* light gray border *             /* rounded corners */
+    padding: 6px 8px;                  /* vertical/horizontal padding */
+    font-size: 14px;                   /* sensible text size */
+    color: #333;                       /* dark text */
+}
+
+/* Hover state: slightly darker border */
+QLineEdit:hover {
+    border: 1px solid #82D37B;         /* green accent on hover */
+}
+
+/* Focus state: green glow and stronger border */
+QLineEdit:focus {
+    border: 1px solid #82D37B;         /* green accent */
+    outline: none;                     /* remove default focus ring */
+    /* outer glow approximation */
+    qproperty-frame: false;
+}
+
+/* Disabled state: muted look */
+QLineEdit:disabled {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    color: #999;
+}
+
+/* Placeholder text styling */
+QLineEdit::placeholder {
+    color: #999;
+    font-style: italic;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>kg</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>650</y>
+        <width>118</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Weight(kg):</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_height">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>690</y>
+        <width>118</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Base QLineEdit styling */
+QLineEdit {
+    background-color: #fff;            /* white background */
+    border: 1px solid #0B2E33;            /* light gray border *             /* rounded corners */
+    padding: 6px 8px;                  /* vertical/horizontal padding */
+    font-size: 14px;                   /* sensible text size */
+    color: #333;                       /* dark text */
+}
+
+/* Hover state: slightly darker border */
+QLineEdit:hover {
+    border: 1px solid #82D37B;         /* green accent on hover */
+}
+
+/* Focus state: green glow and stronger border */
+QLineEdit:focus {
+    border: 1px solid #82D37B;         /* green accent */
+    outline: none;                     /* remove default focus ring */
+    /* outer glow approximation */
+    qproperty-frame: false;
+}
+
+/* Disabled state: muted look */
+QLineEdit:disabled {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    color: #999;
+}
+
+/* Placeholder text styling */
+QLineEdit::placeholder {
+    color: #999;
+    font-style: italic;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>cm</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>650</y>
+        <width>118</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Bloodtype:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="combo_bloodtype">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>690</y>
+        <width>118</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Base QLineEdit styling */
+
+    background-color: #fff;            /* white background */
+    border: 1px solid #ccc;            /* light gray border */
+    border-radius: 6px;                /* rounded corners */
+    padding: 6px 8px;                  /* vertical/horizontal padding */
+    font-size: 14px;                   /* sensible text size */
+    color: #333;                       /* dark text */
+
+
+</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>A+</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A-</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B+</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>B-</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>AB+</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>AB-</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O+</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>O-</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_31">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>650</y>
+        <width>118</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Height(cm):</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_24">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>559</y>
+        <width>443</width>
+        <height>74</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QFrame" name="frame_25">
+         <property name="styleSheet">
+          <string notr="true">border: none;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QRadioButton" name="radioButton_3">
+          <property name="geometry">
+           <rect>
+            <x>9</x>
+            <y>9</y>
+            <width>58</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Single</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radioButton_4">
+          <property name="geometry">
+           <rect>
+            <x>9</x>
+            <y>31</y>
+            <width>82</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Separated</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_26">
+         <property name="styleSheet">
+          <string notr="true">border: none;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QRadioButton" name="radioButton_5">
+          <property name="geometry">
+           <rect>
+            <x>9</x>
+            <y>9</y>
+            <width>67</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Married</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radioButton_6">
+          <property name="geometry">
+           <rect>
+            <x>9</x>
+            <y>31</y>
+            <width>69</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Annuled</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_27">
+         <property name="styleSheet">
+          <string notr="true">border: none;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QRadioButton" name="radioButton_7">
+          <property name="geometry">
+           <rect>
+            <x>9</x>
+            <y>9</y>
+            <width>99</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Co-habitation</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radioButton_8">
+          <property name="geometry">
+           <rect>
+            <x>9</x>
+            <y>31</y>
+            <width>62</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Widow</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>530</y>
+        <width>443</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Civil Status:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="submitbutton">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>690</y>
+        <width>254</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #0B2E33;
+color: white;</string>
+      </property>
+      <property name="text">
+       <string>Submit</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="Cabs.qrc"/>
+ </resources>
+ <connections/>
+</ui>

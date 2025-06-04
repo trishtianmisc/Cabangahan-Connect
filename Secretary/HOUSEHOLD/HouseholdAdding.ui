@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>713</width>
+    <height>295</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: white;</string>
+  </property>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>100</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Member:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line_member">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>90</y>
+     <width>391</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>500</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <underline>false</underline>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Base QLineEdit styling */
+QLineEdit {
+    background-color: #fff;           /* white background */
+    border: 1px solid #ccc;           /* light gray border */
+    border-radius: 6px;               /* rounded corners */
+    padding: 6px 8px;                 /* vertical/horizontal padding */
+    font-size: 14px;                  /* sensible text size */
+    color: #333;                      /* dark text */
+}
+
+/* Hover state: slightly darker border */
+QLineEdit:hover {
+    border: 1px solid #999;
+}
+
+/* Focus state: blue glow and stronger border */
+QLineEdit:focus {
+    border: 1px solid #409EFF;        /* blue accent */
+    outline: none;                    /* remove default focus ring */
+    
+}
+
+/* Disabled state: muted look */
+QLineEdit:disabled {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    color: #999;
+}
+
+/* Placeholder text styling */
+QLineEdit[echoMode=&quot;0&quot;] {            /* only applies when not password mode */
+    qproperty-placeholderText: &quot;Enter text…&quot;;
+}
+QLineEdit::placeholder {
+    color: #999;
+    font-style: italic;
+}
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Enter text…</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="member_btn">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>90</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line_relationship">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>150</y>
+     <width>391</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>500</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <underline>false</underline>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Base QLineEdit styling */
+QLineEdit {
+    background-color: #fff;           /* white background */
+    border: 1px solid #ccc;           /* light gray border */
+    border-radius: 6px;               /* rounded corners */
+    padding: 6px 8px;                 /* vertical/horizontal padding */
+    font-size: 14px;                  /* sensible text size */
+    color: #333;                      /* dark text */
+}
+
+/* Hover state: slightly darker border */
+QLineEdit:hover {
+    border: 1px solid #999;
+}
+
+/* Focus state: blue glow and stronger border */
+QLineEdit:focus {
+    border: 1px solid #409EFF;        /* blue accent */
+    outline: none;                    /* remove default focus ring */
+   
+}
+
+/* Disabled state: muted look */
+QLineEdit:disabled {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    color: #999;
+}
+
+/* Placeholder text styling */
+QLineEdit[echoMode=&quot;0&quot;] {            /* only applies when not password mode */
+    qproperty-placeholderText: &quot;Enter text…&quot;;
+}
+QLineEdit::placeholder {
+    color: #999;
+    font-style: italic;
+}
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Enter text…</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>160</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Relationship:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="confirm_btn">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>210</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Confirm</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

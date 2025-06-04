@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProfilingWidget</class>
+ <widget class="QWidget" name="ProfilingWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1397</width>
+    <height>816</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>80</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #0B2E33;
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_9">
+      <property name="leftMargin">
+       <number>37</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>21</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;</string>
+        </property>
+        <property name="text">
+         <string>HOUSEHOLD</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frame_2">
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame {
+
+background-color: white;
+
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <widget class="QLineEdit" name="line_ownership">
+         <property name="geometry">
+          <rect>
+           <x>700</x>
+           <y>220</y>
+           <width>500</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>500</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <underline>false</underline>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">/* Base QLineEdit styling */
+QLineEdit {
+    background-color: #fff;           /* white background */
+    border: 1px solid #0B2E33;           /* light gray border */
+    border-radius: 6px;               /* rounded corners */
+    padding: 6px 8px;                 /* vertical/horizontal padding */
+    font-size: 14px;                  /* sensible text size */
+    color: #333;                      /* dark text */
+}
+
+/* Hover state: slightly darker border */
+QLineEdit:hover {
+    border: 1px solid #999;
+}
+
+/* Focus state: blue glow and stronger border */
+QLineEdit:focus {
+    border: 1px solid #409EFF;        /* blue accent */
+    outline: none;                    /* remove default focus ring */
+}
+
+/* Disabled state: muted look */
+QLineEdit:disabled {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    color: #999;
+}
+
+/* Placeholder text styling */
+QLineEdit[echoMode=&quot;0&quot;] {            /* only applies when not password mode */
+    qproperty-placeholderText: &quot;Enter text…&quot;;
+}
+QLineEdit::placeholder {
+    color: #999;
+    font-style: italic;
+}
+</string>
+         </property>
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Enter text…</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="popup_resident">
+         <property name="geometry">
+          <rect>
+           <x>580</x>
+           <y>220</y>
+           <width>61</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 1px solid #0B2E33;</string>
+         </property>
+         <property name="text">
+          <string>Select</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>700</x>
+           <y>190</y>
+           <width>161</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Ownership Status:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>190</y>
+           <width>171</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Head of Household:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="line_contact">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>330</y>
+           <width>491</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>500</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <underline>false</underline>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">/* Base QLineEdit styling */
+QLineEdit {
+    background-color: #fff;           /* white background */
+    border: 1px solid #0B2E33;           /* light gray border */
+    border-radius: 6px;               /* rounded corners */
+    padding: 6px 8px;                 /* vertical/horizontal padding */
+    font-size: 14px;                  /* sensible text size */
+    color: #333;                      /* dark text */
+}
+
+/* Hover state: slightly darker border */
+QLineEdit:hover {
+    border: 1px solid #999;
+}
+
+/* Focus state: blue glow and stronger border */
+QLineEdit:focus {
+    border: 1px solid #409EFF;        /* blue accent */
+    outline: none;                    /* remove default focus ring */
+}
+
+/* Disabled state: muted look */
+QLineEdit:disabled {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    color: #999;
+}
+
+/* Placeholder text styling */
+QLineEdit[echoMode=&quot;0&quot;] {            /* only applies when not password mode */
+    qproperty-placeholderText: &quot;Enter text…&quot;;
+}
+QLineEdit::placeholder {
+    color: #999;
+    font-style: italic;
+}
+</string>
+         </property>
+         <property name="placeholderText">
+          <string>Enter text…</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>300</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Contact:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>710</x>
+           <y>300</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Purok:</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="combo_purok">
+         <property name="geometry">
+          <rect>
+           <x>700</x>
+           <y>330</y>
+           <width>501</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>45</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">/* Base QLineEdit styling */
+
+    background-color: #fff;            /* white background */
+    border: 1px solid #0B2E33;            /* light gray border */
+    border-radius: 6px;                /* rounded corners */
+    padding: 6px 8px;                  /* vertical/horizontal padding */
+    font-size: 14px;                   /* sensible text size */
+    color: #333;                       /* dark text */
+
+
+</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="line_head">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>220</y>
+           <width>421</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>500</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <underline>false</underline>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">/* Base QLineEdit styling */
+QLineEdit {
+    background-color: #fff;           /* white background */
+    border: 1px solid #0B2E33;           /* light gray border */
+    border-radius: 6px;               /* rounded corners */
+    padding: 6px 8px;                 /* vertical/horizontal padding */
+    font-size: 14px;                  /* sensible text size */
+    color: #333;                      /* dark text */
+}
+
+/* Hover state: slightly darker border */
+QLineEdit:hover {
+    border: 1px solid #999;
+}
+
+/* Focus state: blue glow and stronger border */
+QLineEdit:focus {
+    border: 1px solid #409EFF;        /* blue accent */
+    outline: none;                    /* remove default focus ring */
+}
+
+/* Disabled state: muted look */
+QLineEdit:disabled {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    color: #999;
+}
+
+/* Placeholder text styling */
+QLineEdit[echoMode=&quot;0&quot;] {            /* only applies when not password mode */
+    qproperty-placeholderText: &quot;Enter text…&quot;;
+}
+QLineEdit::placeholder {
+    color: #999;
+    font-style: italic;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Enter text…</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="submit_btn">
+         <property name="geometry">
+          <rect>
+           <x>1060</x>
+           <y>410</y>
+           <width>141</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #0B2E33;
+color: white;</string>
+         </property>
+         <property name="text">
+          <string>Submit</string>
+         </property>
+        </widget>
+        <widget class="QFrame" name="frame_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>40</y>
+           <width>1411</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #1ABC9C	;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none; color: white;</string>
+            </property>
+            <property name="text">
+             <string>NEW HOUSEHOLD</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="Cabs.qrc"/>
+ </resources>
+ <connections/>
+</ui>
