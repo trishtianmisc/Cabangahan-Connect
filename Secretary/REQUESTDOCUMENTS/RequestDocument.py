@@ -92,6 +92,7 @@ class RequestDocumentsWidget(QtWidgets.QWidget):
 
             residentid = int(self.residentid.text())  # can raise ValueError
 
+            # Check if resident exists
             self.cursor.execute("SELECT res_registered_voter FROM RESIDENT WHERE res_id = %s", (residentid,))
             resident_exists = self.cursor.fetchone()
 
@@ -100,27 +101,32 @@ class RequestDocumentsWidget(QtWidgets.QWidget):
                 return
 
             registered_voter = resident_exists[0]
-            print(f'Registered voter {registered_voter}')
-            if registered_voter.strip().lower() != 'yes':
+            certificate_type = self.typeOfCertificate.currentText()
+
+            # Only restrict if the certificate is Business Permit
+            if certificate_type == "Business Permit" and registered_voter.strip().lower() != 'yes':
                 self.eligible.show()
+                QtWidgets.QMessageBox.warning(self, "NOT ELIGIBLE",
+                                              "ONLY REGISTERED VOTERS CAN REQUEST BUSINESS PERMIT")
                 return
             else:
                 self.eligible.hide()
 
+            # Process price input
             raw_price = self.price.text().strip()
-                # Remove currency symbol, commas, and trailing period
-            clean_price = re.sub(r'[^\d.]', '', raw_price).rstrip('.')  # Result: '120.00'
-
-            # Convert to float
+            clean_price = re.sub(r'[^\d.]', '', raw_price).rstrip('.')
             price_numeric = float(clean_price)
+
+            # Create Request object
             request_doc = Request(
                 None,
-                self.typeOfCertificate.currentText(),
+                certificate_type,
                 self.residentid.text(),
                 price_numeric,
                 self.official_id
             )
 
+            # Insert into DB
             query = "INSERT INTO REQUEST_DOCUMENT (RESIDENT_ID, CERTIFICATE_TYPE, PRICE, OFFICIAL_ID) VALUES (%s, %s, %s, %s)"
             values = (request_doc.residentID, request_doc.typeOfCertificate, price_numeric, self.official_id)
             self.cursor.execute(query, values)
@@ -129,6 +135,7 @@ class RequestDocumentsWidget(QtWidgets.QWidget):
 
             self.list_of_request_document_widget.show_list_of_request()
 
+            # Fetch full name
             self.cursor.execute("SELECT res_firstname, res_middlename, res_lastname FROM RESIDENT WHERE res_id = %s",
                                 (residentid,))
             result = self.cursor.fetchone()
@@ -136,13 +143,14 @@ class RequestDocumentsWidget(QtWidgets.QWidget):
                 fname, mname, lname = result
                 full_name = f"{fname} {mname} {lname}".strip()
 
-                if request_doc.typeOfCertificate == "Punong Barangay":
+                # Display appropriate certificate form
+                if certificate_type == "Punong Barangay":
                     self.PunongBarangay.nameLineEdit.setText(full_name)
                     self.certificatestackedWidget.setCurrentWidget(self.PunongBarangay)
-                elif request_doc.typeOfCertificate == "Barangay Clearance":
+                elif certificate_type == "Barangay Clearance":
                     self.barangayClearance.nameLineEdit.setText(full_name)
                     self.certificatestackedWidget.setCurrentWidget(self.barangayClearance)
-                elif request_doc.typeOfCertificate == "Business Permit":
+                elif certificate_type == "Business Permit":
                     self.BusinessPermit.label_2.setText(full_name)
                     self.certificatestackedWidget.setCurrentWidget(self.BusinessPermit)
 
